@@ -7,7 +7,7 @@ const forecast = require("./utils/forecast");
 const app = express();
 app.use(cors());
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.get("/weather", function (req, resp) {
   console.log(req.query.address);
