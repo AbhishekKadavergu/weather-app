@@ -10,7 +10,7 @@ app.use(cors());
 const port = process.env.PORT || 8000;
 
 app.get("/weather", function (req, resp) {
-  console.log(req.query.address);
+  // console.log(req.query.address);
   if (!req.query.address) {
     return resp.send({
       error: "You must  provide an Address",
